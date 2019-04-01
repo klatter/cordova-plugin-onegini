@@ -45,7 +45,7 @@
 
             NSDictionary *config = @{OGCDVPluginKeyResourceBaseURL: OneginiConfigModel.configuration[ONGResourceBaseURL]};
             [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:config] callbackId:command.callbackId];
-            [self handleLaunchNotification];
+            // [self handleLaunchNotification];
         }];
     }];
 }
