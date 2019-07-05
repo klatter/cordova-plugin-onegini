@@ -21,7 +21,7 @@ const spawn = require('child_process').spawn;
 
 module.exports = function (context) {
   const pluginId = 'cordova-plugin-onegini';
-  const deferral = context.requireCordovaModule('q').defer();
+  const deferral = require('q').defer();
   const platform = context.opts.plugin.platform;
 
   // We only want to invoke the plugin for the iOS platform since it doesn't make any sense to resolve the iOS SDK dependencies when

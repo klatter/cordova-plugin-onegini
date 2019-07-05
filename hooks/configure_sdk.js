@@ -36,7 +36,7 @@ module.exports = function (context) {
     return;
   }
 
-  const deferral = context.requireCordovaModule('q').defer();
+  const deferral = require('q').defer();
   const args = [
     '--cordova',
     '--app-dir', context.opts.projectRoot
