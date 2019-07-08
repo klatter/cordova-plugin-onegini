@@ -39,7 +39,7 @@ module.exports = function (context) {
 
   const projectRoot = context.opts.projectRoot;
   const hasExtractedConfig = hasExtractedConfigFiles(context);
-  const deferral = context.requireCordovaModule('q').defer();
+  const deferral = require('q').defer();
   const args = ['--cordova', '--app-dir', projectRoot];
   console.log('Configuring the Onegini SDK');
   console.log('===========================\n\n');
