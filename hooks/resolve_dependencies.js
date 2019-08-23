@@ -38,7 +38,7 @@ module.exports = function (context) {
     shell: true
   };
   executable = getGradleExecutableForPlatform();
-  const gradle = spawn(executable, ['clean', 'resolveDependencies'], options);
+  const gradle = spawn(executable, ['clean', 'resolveDependencies','--stacktrace','--debug'], options);
 
   gradle.stdout.on('data', (data) => {
     process.stdout.write(data);
